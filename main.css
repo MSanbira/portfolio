@@ -192,15 +192,18 @@ h3 {
 }
 
 .text-overlay h3 {
-    display: none;
+    height: 54px;
+    color: rgba(0, 0, 0, 0);
+    transition: 0.5s;
 }
 
 .text-overlay {
     position: absolute;
-    bottom: 30px;
+    bottom: -40px;
     left: 30px;
     right: 30px;
     z-index: 30;
+    transition: 1s 0.5s;
 }
 
 .mockup:hover .color-overlay {
@@ -209,7 +212,13 @@ h3 {
 }
 
 .mockup:hover .text-overlay h3 {
-    display: block;
+    color: black;
+    transition: 0.5s 0.3s;
+}
+
+.mockup:hover .text-overlay {
+    bottom: 30px;
+    transition: 1s;
 }
 
 /* footer */
