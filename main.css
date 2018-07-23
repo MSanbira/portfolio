@@ -57,13 +57,12 @@ body {
 
 .container {
     width: 960px;
-    padding: 20px;
     margin: 0 auto;
 }
 
 .col-1-1, .col-1-2 {
-    width: 630px;
-    height: 250px;
+    width: 100%;
+    height: 400px;
     margin: 0 auto 30px auto;
 }
 
@@ -100,7 +99,7 @@ h3 {
     align-items: center;
     height: 60px;
     padding: 0 30px;
-    margin-bottom: 20px;
+    margin-bottom: 100px;
 }
 
 .name {
@@ -128,11 +127,12 @@ h3 {
 
 .primary-hero {
     width: 100%;
-    padding: 0 15px 30px 15px;
+    padding: 0 15px;
+    margin-bottom: 100px;
 }
 
 .primary-hero h1 {
-    margin-bottom: 20px;
+    margin-bottom: 30px;
 }
 
 .social-icons {
@@ -144,8 +144,8 @@ h3 {
 }
 
 .social-icons img {
-    width: 50px;
-    height: 50px;
+    width: 25px;
+    height: 25px;
     margin-right: 20px;
 }
 
@@ -163,25 +163,26 @@ h3 {
 }
 
 .col-1-2 .mockup {
-    width: 300px;
+    width: 465px;
     height: 100%;
 }
 
 .mockup .color-overlay {
-    height: 250px;
+    height: 400px;
     position: absolute;
     top: 0;
     left: 0;
     background-color: rgba(0, 10, 200, 0);
     z-index: 20;
+    transition: 1s;
 }
 
 .col-1-1 .color-overlay {
-    width: 630px;
+    width: 960px;
 }
 
 .col-1-2 .color-overlay {
-    width: 300px;
+    width: 465px;
 }
 
 .text-overlay h2 {
@@ -190,12 +191,15 @@ h3 {
     padding-left: 15px;
 }
 
-.text-overlay {
+.text-overlay h3 {
     display: none;
+}
+
+.text-overlay {
     position: absolute;
-    bottom: 20px;
-    left: 20px;
-    right: 20px;
+    bottom: 30px;
+    left: 30px;
+    right: 30px;
     z-index: 30;
 }
 
@@ -204,9 +208,8 @@ h3 {
     transition: 1s;
 }
 
-.mockup:hover .text-overlay {
+.mockup:hover .text-overlay h3 {
     display: block;
-    transition: 1.5;
 }
 
 /* footer */
@@ -218,6 +221,7 @@ h3 {
     padding: 0 30px;
     height: 60px;
     align-items: center;
+    margin-top: 50px;
 }
 
 .social-icons-footer {
