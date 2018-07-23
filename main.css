@@ -49,6 +49,7 @@ table {
 }
 
 body {
+    margin-top: 160px;
     font-family: "Roboto", Arial, Helvetica, sans-serif;
     line-height: 1.5;
     background-color: white;
@@ -93,13 +94,23 @@ h3 {
 /* header */
 
 .primary-header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.7);
     display: flex;
     flex-flow: row nowrap;
     justify-content: space-between;
     align-items: center;
     height: 60px;
     padding: 0 30px;
-    margin-bottom: 100px;
+    z-index: 100;
+    transition: 0.5s;
+}
+
+.fixed-shadow {
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.3);
+    transition: 0.5s;
 }
 
 .name {
@@ -242,4 +253,48 @@ h3 {
     width: 30px;
     height: 30px;
     margin-right: 15px;
+}
+
+@media (max-width: 960px) {
+
+    h1 {
+        padding: 0 10px;
+    }
+
+    .container {
+        width: 100%;
+        padding: 0;
+    }
+
+    .col-1-1 {
+        margin: 0;
+    }
+
+    .col-1-2 .mockup {
+        width: 100%;
+    }
+
+    .col-1-2 {
+        flex-flow: column;
+        height: 800px;
+    }
+
+    .col-1-1 .color-overlay, .col-1-2 .color-overlay {
+        width: 100%;
+    }
+}
+
+@media (max-width: 500px) {
+
+    h1 {
+        font-size: 24px;
+    }
+
+    .text-overlay h3 {
+        color: black;
+    }
+    
+    .text-overlay {
+        bottom: 30px;
+    }
 }
