@@ -11,17 +11,21 @@
 </head>
 
 <body>
-    <div class="wrapper-home">
-        <header class="primary-header">
-            <h2 class="name">MATAN SANBIRA</h2>
-            <nav class="primary-nav">
-                <ul>
-                    <li class="nav-btn" data-nav="work">WORK</li>
-                    <li class="nav-btn" data-nav="about">ABOUT</li>
-                    <li class="nav-btn" data-nav="contact">CONTACT ME</li>
-                </ul>
-            </nav>
-        </header>
+
+    <header class="primary-header">
+        <h2 class="name nav-btn" data-nav="home">MATAN SANBIRA</h2>
+        <nav class="primary-nav">
+            <ul>
+                <li class="nav-btn" data-nav="work">WORK</li>
+                <li class="nav-btn" data-nav="about">ABOUT</li>
+                <li class="nav-btn" data-nav="contact">CONTACT ME</li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="curtain open hide"></div>
+
+    <div class="wrapper show" data-nav="#home">
 
         <div class="container">
             <section class="primary-hero">
@@ -73,6 +77,18 @@
             </section>
         </div>
 
+    </div>
+
+    <div class="wrapper" data-nav="#work">
+        <h1>TEST work</h1>
+    </div>
+
+    <div class="wrapper" data-nav="#about">
+        <h1>TEST about</h1>
+    </div>
+
+    <div class="wrapper" data-nav="#contact">
+        <h1>TEST contact</h1>
     </div>
 
     <footer class="primary-footer">
