@@ -5,6 +5,8 @@ const navBtns = document.querySelectorAll('.nav-btn');
 
 const curtain = document.querySelector('.curtain');
 
+const footer = document.querySelector('footer');
+
 function openCurtain() {
     curtain.classList.add('open');
     setTimeout(function () {curtain.classList.add('hide');}, 1000);
@@ -15,13 +17,13 @@ function closeCurtain() {
     setTimeout(function () {curtain.classList.remove('open');}, 0);
 }
 
-function changeLocationHash(eventTarget) {
-    const navTo = eventTarget.getAttribute('data-nav');
-    window.location.hash = navTo;
+function changeLocationHash(dataNav) {
+    window.location.hash = dataNav;
     window.onhashchange = showSection();
 }
 
 function showSection() {
+    footer.classList.add('hide');
     let hash = window.location.hash;
     for (let i = 0; i < navBtns.length; i++) {
         navBtns[i].classList.remove('chosen');
@@ -37,19 +39,26 @@ function showSection() {
                 sections[i].classList.add('show');
             }
         }
+        footer.classList.remove('hide');
         openCurtain();
     }, 1000,);
 }
 
 function init() {
     registerEvents();
+    if (window.location.hash != "") {
+        showSection();
+    }
+    else {
+        changeLocationHash('home');
+    }
 }
 
 function registerEvents() {
     document.addEventListener('click', (event) => {
 
         if (event.target.classList.contains('nav-btn')) {
-            changeLocationHash(event.target);
+            changeLocationHash(event.target.getAttribute('data-nav'));
         }
     });
 }

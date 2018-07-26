@@ -1,0 +1,84 @@
+
+/* header*/
+
+.work-header {
+    width: 100%;
+    height: 400px;
+    background-color: gray;
+    margin-bottom: 50px;
+    margin-top: -160px;
+}
+
+.work-header .container {
+    height: 100%;
+    position: relative;
+}
+
+.headline {
+    position: absolute;
+    bottom: 30px;
+    left: 0;
+}
+
+.headline h1, .headline h3 {
+    text-align: left;
+}
+
+.inline-logo {
+    height: 13px;
+    padding: 0 5px;
+}
+
+/* tldr */
+
+.tldr {
+    width: 370px;
+    text-align: center;
+    padding: 15px;
+    margin: 0 auto 50px auto;
+}
+
+.view-project img {
+    display: block;
+    float: left;
+    height: 22px;
+}
+
+.view-project {
+    width: 250px;
+    display: block;
+    padding: 10px 15px;
+    border: solid lightblue 1px;
+    margin: 20px auto;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+/* text */
+
+.text-taskboard img {
+    max-width: 465px;
+    max-height: 350px;
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.1);
+}
+
+.text-taskboard p {
+    padding: 0 30px;
+    line-height: 2;
+}
+
+@media (max-width: 960px) {
+    .text-taskboard p  {
+        padding: 30px;
+    }
+}
+
+@media (max-width: 500px) {
+    .tldr {
+        width: 100%;
+    }
+
+    .text-taskboard img {
+        width: 100%;
+    }
+}
