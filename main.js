@@ -68,13 +68,31 @@ function showSection() {
                 sections[i].classList.add('show');
             }
         }
+        window.scrollTo(0, 0);
         footer.classList.remove('hide');
         openCurtain();
     }, 1000, );
 }
 
+function registerWidthImgs() {
+    const imgToChange = document.querySelectorAll('.col-1-2 .mockup img');
+    const taskboardBaner = document.querySelector('.work-taskboard .work-header img');
+    if (window.innerWidth < 960) {
+        if (window.innerWidth < 500) {
+            document.querySelector('.col-1-1.mockup img').setAttribute('src', 'assets/mockups/Artboard-small.png');
+            taskboardBaner.setAttribute('src', 'assets/mockups/Artboard-small.png');
+        }
+        else {
+            taskboardBaner.setAttribute('src', 'assets/mockups/Artboard.png');
+            imgToChange[0].setAttribute('src', 'assets/mockups/btnGame.png');
+            imgToChange[1].setAttribute('src', 'assets/mockups/styles.png');
+        }
+    }
+}
+
 function init() {
     registerEvents();
+    registerWidthImgs();
     if (window.location.hash != "") {
         showSection();
     }
@@ -94,7 +112,12 @@ function registerEvents() {
                 changeLocationHash(event.target.getAttribute('data-nav'), true);
             }
         }
-
+        if (event.target.classList.contains('mockup')) {
+            changeLocationHash(event.target.getAttribute('data-nav'), false);
+        }
+        if (event.target.parentElement.classList.contains('mockup')) {
+            changeLocationHash(event.target.parentElement.getAttribute('data-nav'), false);
+        }
         if (event.target.classList.contains('hamburger') || event.target.parentElement.classList.contains('hamburger')) {
             openCloseNav();
         }
@@ -103,6 +126,8 @@ function registerEvents() {
         }
     });
 }
+
+window.addEventListener('resize', registerWidthImgs());
 
 window.addEventListener('scroll', (event) => {
     if (window.scrollY > 10) {
