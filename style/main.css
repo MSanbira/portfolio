@@ -381,7 +381,6 @@ p {
     }
     .col-1-2 {
         flex-flow: column;
-        height: 800px;
         justify-content: flex-start;
         align-items: center;
     }
@@ -449,15 +448,13 @@ p {
         display: block;
         cursor: pointer;
         font-size: 22px;
-        font-weight: lighter;
         padding: 30px;
         text-align: center;
         font-weight: bold;
         transition: 2s;
     }
-    .primary-nav li:hover {
-        font-weight: bold;
-        transition: 1s;
+    .primary-nav .nav-btn.chosen {
+        text-decoration: underline;
     }
     .primary-footer {
         flex-flow: column-reverse;

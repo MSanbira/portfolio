@@ -1,16 +1,10 @@
 
 const sections = document.querySelectorAll('.wrapper');
-
 const headerNav = document.querySelector('.primary-nav');
-
 const navBtns = document.querySelectorAll('.nav-btn');
-
 const backdrop = document.querySelector('.backdrop');
-
 const curtain = document.querySelector('.curtain');
-
 const footer = document.querySelector('footer');
-
 const hamburger = document.querySelector('.hamburger');
 
 function openCurtain() {
@@ -33,11 +27,16 @@ function showBackdrop() {
     setTimeout(function () { backdrop.classList.add('active'); }, 0);
 }
 
-function changeLocationHash(dataNav) {
-    if (dataNav != 'home' || hamburger.classList.contains('active')) {
+function changeLocationHash(dataNav, ifHamburgerBtn) {
+    if (ifHamburgerBtn || hamburger.classList.contains('active')) {
         openCloseNav();
     }
-    window.location.hash = dataNav;
+    if (dataNav == 'work') {
+        window.location.hash = 'work/taskboard';
+    }
+    else {
+        window.location.hash = dataNav;
+    }
     window.onhashchange = showSection();
 }
 
@@ -57,7 +56,7 @@ function showSection() {
     let hash = window.location.hash;
     for (let i = 0; i < navBtns.length; i++) {
         navBtns[i].classList.remove('chosen');
-        if (('#' + navBtns[i].getAttribute('data-nav')) == hash) {
+        if (hash.includes(navBtns[i].getAttribute('data-nav'))) {
             navBtns[i].classList.add('chosen');
         }
     }
@@ -80,7 +79,7 @@ function init() {
         showSection();
     }
     else {
-        changeLocationHash('home');
+        changeLocationHash('home', false);
     }
 }
 
@@ -88,7 +87,12 @@ function registerEvents() {
     document.addEventListener('click', (event) => {
 
         if (event.target.classList.contains('nav-btn')) {
-            changeLocationHash(event.target.getAttribute('data-nav'));
+            if (event.target.classList.contains('arrow') || event.target.parentElement.parentElement.classList.contains('footer-nav') || event.target.getAttribute('data-nav') == 'home') {
+                changeLocationHash(event.target.getAttribute('data-nav'), false);
+            }
+            else {
+                changeLocationHash(event.target.getAttribute('data-nav'), true);
+            }
         }
 
         if (event.target.classList.contains('hamburger') || event.target.parentElement.classList.contains('hamburger')) {

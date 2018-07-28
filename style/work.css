@@ -150,7 +150,10 @@
         left: 30px;
     }
     .text-taskboard h2 {
-        margin-top: 30px;
+        margin: 30px;
+    }
+    .text-taskboard p {
+        margin: 30px;
     }
     .taskboard-specs {
         padding: 30px;
@@ -163,5 +166,8 @@
     }
     .text-taskboard img {
         width: 100%;
+    }
+    .arrow {
+        position: static;
     }
 }
