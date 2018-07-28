@@ -63,9 +63,8 @@ body {
 
 .col-1-1, .col-1-2 {
     width: 100%;
-    /* change to 100% */
-    height: 400px;
-    margin: 0 auto 30px auto;
+    height: 100%;
+    margin: 0 auto 50px auto;
 }
 
 .col-1-2 {
@@ -131,6 +130,7 @@ h3 {
 
 p {
     font-size: 18px;
+    line-height: 2;
 }
 
 /* header */
@@ -327,6 +327,7 @@ p {
     display: flex;
     flex-flow: row nowrap;
     justify-content: space-between;
+    background-color: white;
     padding: 0 30px;
     width: 100%;
     height: 60px;
@@ -460,12 +461,15 @@ p {
     }
     .primary-footer {
         flex-flow: column-reverse;
-        height: 100%;
+        height: 135px;
     }
     .social-icons-footer {
         padding: 20px;
     }
     .footer-nav {
         padding: 20px;
+    }
+    .footer-nav li {
+        padding: 0 10px;
     }
 }
