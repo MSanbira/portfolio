@@ -15,6 +15,12 @@
 
     <header class="primary-header">
         <h2 class="name nav-btn" data-nav="home">MATAN SANBIRA</h2>
+        <div class="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <div class="nav-mobile-cover"></div>
         <nav class="primary-nav">
             <ul>
                 <li class="nav-btn" data-nav="work">WORK</li>
@@ -23,6 +29,8 @@
             </ul>
         </nav>
     </header>
+
+    <div class="backdrop hide"></div>
 
     <div class="curtain open hide"></div>
 
@@ -105,13 +113,27 @@
                         </a>
                     </div>
                 </section>
-
-                <section class="col-1-2 text-taskboard">
-                    <img src="assets/work/taskboard/taskboard1.png" alt="taskboard">
-                    <p>Taskboard was a project done in the "Create" Bootcamp whit emphasis on Bootstrap styling and JavaScript
-                        code in the form of Model–view–controller. The app features include titled lists, cards with text
-                        and relevant members, and a members section with their full names.</p>
-                </section>
+                <div class="text-taskboard">
+                    <section class="col-1-2">
+                        <img src="assets/work/taskboard/taskboard1.png" alt="taskboard">
+                        <p>Taskboard was a project done in the "Create" Bootcamp with emphasis on Bootstrap styling and JavaScript
+                            code in the form of Model–view–controller. The app features include titled lists, cards with
+                            text and relevant members, and a members section with their full names.
+                            <br> Each feature of the app has 'add', 'edit' and 'delete' functions. which all are coded in Javascript.</p>
+                    </section>
+                    <section class="col-1-1">
+                        <p>The project specs were in the form of blackboard photos and specifications .md file. Later I was
+                            given screenshots to set the app lookes, mainly with Bootstrap.</p>
+                        <div class="taskboard-specs">
+                            <img src="assets/work/taskboard/specs/card-edit.jpg" alt="spec example">
+                            <img src="assets/work/taskboard/specs/card.jpg" alt="spec example">
+                            <img src="assets/work/taskboard/specs/list.jpg" alt="spec example">
+                            <img src="assets/work/taskboard/specs/lists.jpg" alt="spec example">
+                            <img src="assets/work/taskboard/specs/members.jpg" alt="spec example">
+                            <img src="assets/work/taskboard/specs/menu.jpg" alt="spec example">
+                        </div>
+                    </section>
+                </div>
             </div>
         </div>
 
@@ -149,7 +171,7 @@
             </a>
         </div>
 
-        <nav class="primary-nav">
+        <nav class="footer-nav">
             <ul>
                 <li class="nav-btn" data-nav="work">WORK</li>
                 <li class="nav-btn" data-nav="about">ABOUT</li>
