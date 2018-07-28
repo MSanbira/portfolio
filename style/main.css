@@ -383,6 +383,7 @@ p {
         flex-flow: column;
         justify-content: flex-start;
         align-items: center;
+        margin: 0;
     }
     .col-1-1 .color-overlay, .col-1-2 .color-overlay {
         width: 100%;

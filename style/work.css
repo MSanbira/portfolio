@@ -61,7 +61,13 @@
     box-shadow: 3px 3px 15px rgba(0, 0, 0, 0.08);
 }
 
-.text-taskboard h2 {
+.text-styles img {
+    max-width: 465px;
+    max-height: 300px;
+    box-shadow: 3px 3px 15px rgba(0, 0, 0, 0.08);
+}
+
+.text-taskboard h2, .text-styles h2 {
     border-left: solid #00A5E7 1px;
     margin-bottom: 18px;
     padding-left: 20px;
@@ -149,14 +155,17 @@
     .headline {
         left: 30px;
     }
-    .text-taskboard h2 {
+    .text-taskboard h2, .text-styles h2 {
         margin: 30px;
     }
-    .text-taskboard p {
+    .text-taskboard p, .text-styles p {
         margin: 30px;
     }
     .taskboard-specs {
         padding: 30px;
+    }
+    .next-project {
+        margin-top: 50px;
     }
 }
 
@@ -164,7 +173,7 @@
     .tldr {
         width: 100%;
     }
-    .text-taskboard img {
+    .text-taskboard img, .text-styles img {
         width: 100%;
     }
     .arrow {
