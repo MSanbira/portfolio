@@ -398,8 +398,11 @@ p {
 }
 
 @media (max-width: 500px) {
+    body {
+        margin-top: 220px;
+    }
     h1 {
-        font-size: 24px;
+        font-size: 22px;
     }
     .text-overlay h3 {
         color: black;

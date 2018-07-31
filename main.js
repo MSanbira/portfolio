@@ -77,13 +77,20 @@ function showSection() {
 function registerWidthImgs() {
     const imgToChange = document.querySelectorAll('.col-1-2 .mockup img');
     const taskboardBaner = document.querySelector('.work-taskboard .work-header img');
+    const stylesBaner = document.querySelector('.work-styles-conference .work-header img');
+    const btnGameBaner = document.querySelector('.work-btn-game .work-header img');
     if (window.innerWidth < 960) {
         if (window.innerWidth < 500) {
             document.querySelector('.col-1-1.mockup img').setAttribute('src', 'assets/mockups/Artboard-small.png');
             taskboardBaner.setAttribute('src', 'assets/mockups/Artboard-small.png');
+            stylesBaner.setAttribute('src', 'assets/mockups/styles-small.png');
+            btnGameBaner.setAttribute('src', 'assets/mockups/btnGame-small.png');
+            document.querySelector('.primary-hero h1').innerHTML = "Hi, I'm a musician<br>Turned web developer<br>And here is some of my work";
         }
         else {
             taskboardBaner.setAttribute('src', 'assets/mockups/Artboard.png');
+            stylesBaner.setAttribute('src', 'assets/mockups/styles.png');
+            btnGameBaner.setAttribute('src', 'assets/mockups/btnGame.png');
             imgToChange[0].setAttribute('src', 'assets/mockups/btnGame.png');
             imgToChange[1].setAttribute('src', 'assets/mockups/styles.png');
         }

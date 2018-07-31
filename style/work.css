@@ -72,22 +72,32 @@
 
 /* text */
 
+.is-text img {
+    box-shadow: 3px 3px 15px rgba(0, 0, 0, 0.08);
+}
+
+.is-text h2 {
+    border-left: solid #00A5E7 1px;
+    margin-bottom: 18px;
+    padding-left: 20px;
+}
+
 .text-taskboard img {
     max-width: 465px;
     max-height: 350px;
-    box-shadow: 3px 3px 15px rgba(0, 0, 0, 0.08);
 }
 
 .text-styles img {
     max-width: 465px;
-    max-height: 300px;
-    box-shadow: 3px 3px 15px rgba(0, 0, 0, 0.08);
+    max-height: 300px;  
 }
 
-.text-taskboard h2, .text-styles h2 {
-    border-left: solid #00A5E7 1px;
-    margin-bottom: 18px;
-    padding-left: 20px;
+.text-btn-game img:first-child {
+    max-height: 500px;
+}
+
+.text-btn-game img:nth-child(2) {
+    max-height: 400px;
 }
 
 .right-side h2 {
@@ -172,10 +182,10 @@
     .headline {
         left: 30px;
     }
-    .text-taskboard h2, .text-styles h2 {
+    .is-text h2 {
         margin: 30px;
     }
-    .text-taskboard p, .text-styles p {
+    .is-text p {
         margin: 30px;
     }
     .taskboard-specs {
@@ -190,7 +200,7 @@
     .tldr {
         width: 100%;
     }
-    .text-taskboard img, .text-styles img {
+    .is-text img {
         width: 100%;
     }
     .arrow {

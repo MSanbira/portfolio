@@ -39,7 +39,7 @@
         <div class="container">
             <section class="primary-hero">
                 <h1>Hi, I'm a musician turned web developer
-                    <br>let me show you what I can do</h1>
+                    <br>And here is some of my work</h1>
                 <div class="social-icons">
                     <a href="https://www.linkedin.com/in/matan-sanbira-695461109/" target="_blank">
                         <img src="assets/in.png" alt="linked-in">
@@ -113,7 +113,8 @@
                     </a>
                 </div>
             </section>
-            <div class="text-taskboard">
+
+            <div class="text-taskboard is-text">
                 <section class="col-1-2">
                     <img src="assets/work/taskboard/taskboard1.png" alt="taskboard">
                     <div class="right-side">
@@ -173,8 +174,9 @@
 
     <div class="wrapper work-styles-conference" data-nav="#work/styles">
         <section class="work-header">
+            <img src="assets/mockups/styles-baner.png" alt="styles conference mockup">
+            <div class="color-overlay"></div>
             <div class="container">
-                <img src="*" alt="taskboard mockup">
                 <div class="headline">
                     <h1>Styles conference</h1>
                     <h3>A responsive site with multiple features</h3>
@@ -196,7 +198,7 @@
                 </div>
             </section>
 
-            <div class="text-styles">
+            <div class="text-styles is-text">
                 <section class="col-1-2">
                     <img src="assets/work/styles/SC1.PNG" alt="styles conference">
                     <div class="right-side">
@@ -215,8 +217,8 @@
                         <p>
                             The site contains five different pages each one has diffrent features. to name a few - each page is separated to "header",
                             "nav", "section", "aside" and "footer" elements with their specific properties. The use of "Flex-box"
-                            to organize and orient the elements and in the elements themselves. Also writing a form with a different
-                            type of inputs, using tables to organize content and ambeding "Google maps" locations.
+                            to organize and orient the elements and in the elements themselves. Also writing a form with
+                            a different type of inputs, using tables to organize content and ambeding "Google maps" locations.
                         </p>
                     </div>
                     <img src="assets/work/styles/SC3.PNG" alt="styles conference">
@@ -234,7 +236,68 @@
     </div>
 
     <div class="wrapper work-btn-game" data-nav="#work/btnGame">
+
+        <section class="work-header">
+            <img src="assets/mockups/btnGame-baner.png" alt="button game mockup">
+            <div class="color-overlay"></div>
+            <div class="container">
+                <div class="headline">
+                    <h1>BTN game</h1>
+                    <h3>A game where you push btns</h3>
+                </div>
+            </div>
+        </section>
+
         <div class="container">
+            <section class="work-hero">
+                <div class="tldr">
+                    <h2>TL;DR</h2>
+                    <h3>Role: front-end developer</h3>
+                    <h3>Coded during
+                        <a href="http://www.createfuture.co.il/" target="_blank">
+                            <img class="inline-logo" src="assets/create-logo.jpg" alt="create">
+                        </a> bootcamp course</h3>
+                    <a href="https://msanbira.github.io/btnGame/" class="view-project" target="_blank">
+                        <img src="assets/link-new-tab.png" alt="link new tab symbol">view live project
+                    </a>
+                </div>
+            </section>
+
+            <div class="text-btn-game is-text">
+                <section class="col-1-2">
+                    <img src="assets/work/btnGame/btngameM2.PNG" alt="button game">
+                    <div class="right-side">
+                        <h2>General information</h2>
+                        <p>
+                            The "BTN Game" started as a side project with the purpose of practicing JavaScript code. The game premise is to press the
+                            red button as much as you can within one minute. Every press the button pops in a different random
+                            location and as the game goes green buttons appear, press them and it's game over.
+                        </p>
+                        <h2>Game elements</h2>
+                        <p>
+                            A timer in the top-right that runs with a 'setInterval' function and turns red in the last few seconds, A score counter in
+                            the bottom-right that triggers and updates every button click, And a top score element in the
+                            top-left that checks if the top score was beaten when the game is over and saves itself in the
+                            'localStorage' for games to come.
+                        </p>
+                    </div>
+                </section>
+                <section class="col-1-2">
+                    <div class="left-side">
+                        <h2>Technical details</h2>
+                        <p>
+                            The buttons themselves are 'div' elements with a background image and a 'position' set to absolute. When the red button is
+                            pressed the 'gamePlay' function is activated and when the green ones are pressed a 'game over'
+                            function. The 'gamePlay' function activates the timer, sets a random number for the 'top' and
+                            'left' attributes, and checks the score count to add green buttons at a certain amount. The green
+                            buttons are constracted using an 'object' and their location is checked so there will not be
+                            a green button on top of the red one. the 'game over' function shows a screen with changing sayings
+                            and the end score, stops the timer, and restart the game.
+                        </p>
+                    </div>
+                    <img src="assets/work/btnGame/btngameM3.PNG" alt="button game">
+                </section>
+            </div>
 
             <section class="next-project">
                 <img class="nav-btn img-turnd-left arrow" src="assets/work/arrow-right.png" alt="arrow" data-nav="work/styles" title="Styles conference">
