@@ -97,6 +97,19 @@ function registerWidthImgs() {
     }
 }
 
+// TODO : make it  work
+function sendContactMail() {
+    let name = document.querySelector('.input-name');
+    let email = document.querySelector('.input-email');
+    let message = document.querySelector('.input-message');
+    let link = "mailto:myt.comp@gmail.com"
+        + "?cc=myt.comp@gmail.com"
+        + "&subject=" + escape(name.value + email.value)
+        + "&body=" + escape(message.value)
+        ;
+    window.location.href = link;
+}
+
 function init() {
     registerEvents();
     registerWidthImgs();
@@ -131,6 +144,9 @@ function registerEvents() {
         if (event.target.classList.contains('backdrop')) {
             openCloseNav();
         }
+        if (event.target.classList.contains('btn-submit')) {
+            sendContactMail();
+        }
     });
 }
 
@@ -146,4 +162,3 @@ window.addEventListener('scroll', (event) => {
 });
 
 init();
-

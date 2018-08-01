@@ -8,7 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="https://fonts.googleapis.com/css?family=Roboto:100,200,300,400,500,600,700,800" rel="stylesheet">
     <link rel="stylesheet" type="text/css" media="screen" href="style/main.css" />
-    <link rel="stylesheet" type="text/css" media="screen" href="style/work.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="style/sections.css" />
 </head>
 
 <body>
@@ -25,7 +25,6 @@
             <ul>
                 <li class="nav-btn" data-nav="work">WORK</li>
                 <li class="nav-btn" data-nav="about">ABOUT</li>
-                <li class="nav-btn" data-nav="contact">CONTACT ME</li>
             </ul>
         </nav>
     </header>
@@ -89,7 +88,7 @@
     </div>
 
     <div class="wrapper work-taskboard" data-nav="#work/taskboard">
-        <section class="work-header">
+        <section class="section-header">
             <img src="assets/mockups/Artboard-baner.png" alt="taskboard mockup">
             <div class="color-overlay"></div>
             <div class="container">
@@ -173,7 +172,7 @@
     </div>
 
     <div class="wrapper work-styles-conference" data-nav="#work/styles">
-        <section class="work-header">
+        <section class="section-header">
             <img src="assets/mockups/styles-baner.png" alt="styles conference mockup">
             <div class="color-overlay"></div>
             <div class="container">
@@ -237,7 +236,7 @@
 
     <div class="wrapper work-btn-game" data-nav="#work/btnGame">
 
-        <section class="work-header">
+        <section class="section-header">
             <img src="assets/mockups/btnGame-baner.png" alt="button game mockup">
             <div class="color-overlay"></div>
             <div class="container">
@@ -311,11 +310,36 @@
 
 
     <div class="wrapper" data-nav="#about">
-        <h1>TEST about</h1>
+        <section class="section-header">
+            <img src="assets/mockups/btnGame-baner.png" alt="button game mockup">
+            <div class="color-overlay"></div>
+            <div class="container">
+                <div class="headline">
+                    <h1>BTN game</h1>
+                    <h3>A game where you push btns</h3>
+                </div>
+            </div>
+        </section>
     </div>
 
     <div class="wrapper" data-nav="#contact">
-        <h1>TEST contact</h1>
+        <div class="container">
+            <form class="contact-form">
+                    <label>
+                        Name
+                        <input type="text" class="input-name">
+                    </label>
+                    <label>
+                        Email
+                        <input type="email" class="input-email">
+                    </label>
+                    <label>
+                        Message
+                        <textarea class="input-message"></textarea>
+                    </label>
+                <button class="btn-submit">Send</button>
+            </form>
+        </div>
     </div>
 
     <footer class="primary-footer">
