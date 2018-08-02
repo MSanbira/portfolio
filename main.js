@@ -76,9 +76,9 @@ function showSection() {
 
 function registerWidthImgs() {
     const imgToChange = document.querySelectorAll('.col-1-2 .mockup img');
-    const taskboardBaner = document.querySelector('.work-taskboard .work-header img');
-    const stylesBaner = document.querySelector('.work-styles-conference .work-header img');
-    const btnGameBaner = document.querySelector('.work-btn-game .work-header img');
+    const taskboardBaner = document.querySelector('.work-taskboard .section-header img');
+    const stylesBaner = document.querySelector('.work-styles-conference .section-header img');
+    const btnGameBaner = document.querySelector('.work-btn-game .section-header img');
     if (window.innerWidth < 960) {
         if (window.innerWidth < 500) {
             document.querySelector('.col-1-1.mockup img').setAttribute('src', 'assets/mockups/Artboard-small.png');

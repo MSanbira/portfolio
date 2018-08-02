@@ -226,98 +226,6 @@ p {
     transition: 1s;
 }
 
-/* hero */
-
-.primary-hero {
-    width: 100%;
-    padding: 0 15px;
-    margin-bottom: 100px;
-}
-
-.primary-hero h1 {
-    margin-bottom: 30px;
-}
-
-.social-icons {
-    display: flex;
-    flex-flow: row nowrap;
-    justify-content: center;
-    width: 300px;
-    margin: 0 auto;
-}
-
-.social-icons img {
-    width: 25px;
-    height: 25px;
-    margin-right: 20px;
-}
-
-.social-icons a:last-child img {
-    margin-right: 0;
-}
-
-/* mockups */
-
-.mockup {
-    position: relative;
-    z-index: 10;
-    cursor: pointer;
-}
-
-.col-1-1.mockup img {
-    max-height: 500px;
-    width: 960px;
-}
-
-.col-1-2 .mockup img {
-    max-width: 465px;
-    max-height: 400px;
-}
-
-.mockup .color-overlay {
-    width: 100%;
-    height: calc(100% - 6.6px);
-    position: absolute;
-    top: 0;
-    left: 0;
-    background-color: rgba(255, 255, 255, 0);
-    z-index: 20;
-    transition: 1s;
-}
-
-.text-overlay h2 {
-    margin-bottom: 15px;
-}
-
-.text-overlay h3 {
-    color: rgba(0, 0, 0, 0);
-    transition: 0.4s;
-}
-
-.text-overlay {
-    position: absolute;
-    bottom: -20px;
-    left: 30px;
-    right: 30px;
-    z-index: 30;
-    transition: 0.5s 0.2s;
-}
-
-.mockup:hover .color-overlay {
-    background-color: rgba(255, 255, 255, 0.5);
-    transition: 0.5s;
-}
-
-.mockup:hover .text-overlay h3 {
-    color: black;
-    transition: 0.5s 0.3s;
-}
-
-.mockup:hover .text-overlay {
-    bottom: 30px;
-    transition: 0.5s;
-}
-
 /* footer */
 
 .primary-footer {
@@ -363,28 +271,12 @@ p {
 }
 
 @media (max-width: 960px) {
-    .primary-hero h1 {
-        padding: 0 10px;
-    }
     .container {
         width: 100%;
         padding: 0;
     }
     .col-1-1 {
         margin: 0;
-    }
-    .col-1-1.mockup img {
-        width: 100%;
-        height: auto;
-    }
-    .col-1-2 .mockup {
-        width: 100%;
-    }
-    .col-1-2 .mockup img {
-        max-width: 100%;
-        max-height: 100%;
-        width: 100%;
-        height: auto;
     }
     .col-1-2 {
         flex-flow: column;
@@ -403,15 +295,6 @@ p {
     }
     h1 {
         font-size: 22px;
-    }
-    .text-overlay h3 {
-        color: black;
-    }
-    .text-overlay {
-        bottom: 30px;
-    }
-    .mockup .color-overlay {
-        background-color: rgba(255, 255, 255, 0.5);
     }
     .hamburger {
         display: block;
