@@ -1,5 +1,6 @@
 
 const sections = document.querySelectorAll('.wrapper');
+const header = document.querySelector('.primary-header');
 const headerNav = document.querySelector('.primary-nav');
 const navBtns = document.querySelectorAll('.nav-btn');
 const backdrop = document.querySelector('.backdrop');
@@ -54,6 +55,12 @@ function openCloseNav() {
 function showSection() {
     footer.classList.add('hide');
     let hash = window.location.hash;
+    if (hash == '#home') {
+        header.classList.remove('header-white');
+    }
+    else {
+        header.classList.add('header-white');
+    }
     for (let i = 0; i < navBtns.length; i++) {
         navBtns[i].classList.remove('chosen');
         if (hash.includes(navBtns[i].getAttribute('data-nav'))) {
@@ -74,45 +81,8 @@ function showSection() {
     }, 1000, );
 }
 
-function registerWidthImgs() {
-    const imgToChange = document.querySelectorAll('.col-1-2 .mockup img');
-    const taskboardBaner = document.querySelector('.work-taskboard .section-header img');
-    const stylesBaner = document.querySelector('.work-styles-conference .section-header img');
-    const btnGameBaner = document.querySelector('.work-btn-game .section-header img');
-    if (window.innerWidth < 960) {
-        if (window.innerWidth < 500) {
-            document.querySelector('.col-1-1.mockup img').setAttribute('src', 'assets/mockups/Artboard-small.png');
-            taskboardBaner.setAttribute('src', 'assets/mockups/Artboard-small.png');
-            stylesBaner.setAttribute('src', 'assets/mockups/styles-small.png');
-            btnGameBaner.setAttribute('src', 'assets/mockups/btnGame-small.png');
-            document.querySelector('.primary-hero h1').innerHTML = "Hi, I'm a musician<br>Turned web developer<br>And here is some of my work";
-        }
-        else {
-            taskboardBaner.setAttribute('src', 'assets/mockups/Artboard.png');
-            stylesBaner.setAttribute('src', 'assets/mockups/styles.png');
-            btnGameBaner.setAttribute('src', 'assets/mockups/btnGame.png');
-            imgToChange[0].setAttribute('src', 'assets/mockups/btnGame.png');
-            imgToChange[1].setAttribute('src', 'assets/mockups/styles.png');
-        }
-    }
-}
-
-// TODO : make it  work
-function sendContactMail() {
-    let name = document.querySelector('.input-name');
-    let email = document.querySelector('.input-email');
-    let message = document.querySelector('.input-message');
-    let link = "mailto:myt.comp@gmail.com"
-        + "?cc=myt.comp@gmail.com"
-        + "&subject=" + escape(name.value + email.value)
-        + "&body=" + escape(message.value)
-        ;
-    window.location.href = link;
-}
-
 function init() {
     registerEvents();
-    registerWidthImgs();
     if (window.location.hash != "") {
         showSection();
     }
@@ -150,14 +120,12 @@ function registerEvents() {
     });
 }
 
-window.addEventListener('resize', registerWidthImgs());
-
 window.addEventListener('scroll', (event) => {
     if (window.scrollY > 10) {
-        document.querySelector('.primary-header').classList.add('header-scroll');
+        header.classList.add('header-scroll');
     }
     else {
-        document.querySelector('.primary-header').classList.remove('header-scroll');
+        header.classList.remove('header-scroll');
     }
 });
 
