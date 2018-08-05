@@ -202,6 +202,12 @@
     margin: 20px auto;
     text-transform: uppercase;
     text-align: center;
+    transition: 0.3s;
+}
+
+.view-project:hover {
+    background-color: lightgray;
+    transition: 0.3s;
 }
 
 /* text */
@@ -350,6 +356,12 @@ a.btn-section {
     background-color: white;
     font-style: normal;
     font-weight: bold;
+    transition: 0.3s;
+}
+
+a.btn-section:hover {
+    background-color: lightgray;
+    transition: 0.3s;
 }
 
 @media (max-width: 960px) {
