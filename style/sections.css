@@ -31,12 +31,12 @@
 }
 
 .linkedin-img {
-    background-image: url("../assets/icons/linkedIn.svg");
+    background-image: url("../assets/icons/linkedin.svg");
     transition: 0.5s;
 }
 
 .linkedin-img:hover {
-    background-image: url("../assets/icons/linkedIn-b.svg");
+    background-image: url("../assets/icons/linkedin-b.svg");
     transition: 0.5s;
 }
 
